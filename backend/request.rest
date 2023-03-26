@@ -1,0 +1,95 @@
+// CREATE USER
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "User",
+    "email" : "user@email.com",
+    "password" : "123456",
+    "confPassword" : "123456",
+    "role" : "user"
+}
+
+//GET ALL USERS
+###
+GET http://localhost:5000/users
+
+//GET SINGLE USER
+###
+GET http://localhost:5000/users/ae3eafbd-ceab-4799-8abd-1fcac9fa4f82
+
+//UPDATE USER
+###
+PATCH http://localhost:5000/users/ae3eafbd-ceab-4799-8abd-1fcac9fa4f82
+Content-Type: application/json
+
+{
+    "name" : "User updated",
+    "email" : "user@email.com",
+    "password" : "",
+    "confPassword" : "",
+    "role" : "user"
+}
+
+//DELETE USER
+###
+DELETE http://localhost:5000/users/ae3eafbd-ceab-4799-8abd-1fcac9fa4f82
+
+//LOGIN USER 
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "admin@email.com",
+    "password" : "123456"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "user@email.com",
+    "password" : "123456"
+}
+
+//ME
+###
+GET http://localhost:5000/me
+
+//LOGOUT
+###
+DELETE http://localhost:5000/logout
+
+//GET ALL PRODUCTS
+###
+GET http://localhost:5000/products
+
+//GET PRODUCT BY ID
+###
+GET http://localhost:5000/products/659a505c-83db-4320-874a-93882323c5ef
+
+//CREATE PRODUCT
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name" : "Product 6",
+    "price" : 999
+}
+
+//UPDATE PRODUCTS
+###
+PATCH http://localhost:5000/products/b84286eb-1998-4dff-94c1-0116635c34a7
+Content-Type: application/json
+
+{
+    "name" : "Product UPDATED",
+    "price" : 9749
+}
+
+//DELETE PRODUCTS
+###
+DELETE http://localhost:5000/products/659a505c-83db-4320-874a-93882323c5ef
